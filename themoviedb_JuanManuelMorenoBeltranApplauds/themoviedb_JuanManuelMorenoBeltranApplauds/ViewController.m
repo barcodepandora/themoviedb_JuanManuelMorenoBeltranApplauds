@@ -8,17 +8,19 @@
 #import "ViewController.h"
 
 #import "ViewController.h"
-//#import "TMDBViewController.h"
+#import "TMDBViewController.h"
 
 @implementation ViewController
 - (IBAction)bGo:(id)sender {
-//    [self.navigationController pushViewController:[[TMDBViewController alloc] init] animated:YES];
+    [self.navigationController pushViewController:[[TMDBViewController alloc] init] animated:YES];
     NSLog(@"Go");
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    
 }
 
 //- (IBAction)go:(id)sender {
