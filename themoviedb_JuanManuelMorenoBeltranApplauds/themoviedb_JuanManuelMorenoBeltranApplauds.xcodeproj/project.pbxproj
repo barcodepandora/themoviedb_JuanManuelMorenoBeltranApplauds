@@ -12,6 +12,7 @@
 		568B9EBC2CB1981500BB8E92 /* TMDBCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 568B9EBB2CB1981500BB8E92 /* TMDBCollectionViewCell.m */; };
 		568B9EC32CB1C4B500BB8E92 /* MovieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 568B9EC12CB1C4B500BB8E92 /* MovieViewController.m */; };
 		568B9EC42CB1C4B500BB8E92 /* MovieViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 568B9EC22CB1C4B500BB8E92 /* MovieViewController.xib */; };
+		568B9EC82CB1D86C00BB8E92 /* TMDBViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 568B9EC72CB1D86C00BB8E92 /* TMDBViewModel.m */; };
 		56E95AA52CB0AE4500CB4826 /* TMDBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56E95AA32CB0AE4500CB4826 /* TMDBViewController.m */; };
 		56E95AA62CB0AE4500CB4826 /* TMDBViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56E95AA42CB0AE4500CB4826 /* TMDBViewController.xib */; };
 		56E95AAA2CB0B38B00CB4826 /* TMDB.m in Sources */ = {isa = PBXBuildFile; fileRef = 56E95AA92CB0B38B00CB4826 /* TMDB.m */; };
@@ -57,6 +58,8 @@
 		568B9EC02CB1C4B500BB8E92 /* MovieViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieViewController.h; sourceTree = "<group>"; };
 		568B9EC12CB1C4B500BB8E92 /* MovieViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieViewController.m; sourceTree = "<group>"; };
 		568B9EC22CB1C4B500BB8E92 /* MovieViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieViewController.xib; sourceTree = "<group>"; };
+		568B9EC62CB1D73200BB8E92 /* TMDBViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TMDBViewModel.h; sourceTree = "<group>"; };
+		568B9EC72CB1D86C00BB8E92 /* TMDBViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TMDBViewModel.m; sourceTree = "<group>"; };
 		56E95AA22CB0AE4500CB4826 /* TMDBViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TMDBViewController.h; sourceTree = "<group>"; };
 		56E95AA32CB0AE4500CB4826 /* TMDBViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TMDBViewController.m; sourceTree = "<group>"; };
 		56E95AA42CB0AE4500CB4826 /* TMDBViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TMDBViewController.xib; sourceTree = "<group>"; };
@@ -154,6 +157,15 @@
 			path = Movies;
 			sourceTree = "<group>";
 		};
+		568B9EC52CB1D6DF00BB8E92 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				568B9EC62CB1D73200BB8E92 /* TMDBViewModel.h */,
+				568B9EC72CB1D86C00BB8E92 /* TMDBViewModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		56E95AA72CB0B08C00CB4826 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -196,9 +208,10 @@
 		56EDFCA22CB07D30007E050C /* themoviedb_JuanManuelMorenoBeltranApplauds */ = {
 			isa = PBXGroup;
 			children = (
-				5638FE842CB17ED1000CB789 /* UseCase */,
 				5638FE812CB17E1C000CB789 /* REST */,
 				56E95AA82CB0B34600CB4826 /* Model */,
+				5638FE842CB17ED1000CB789 /* UseCase */,
+				568B9EC52CB1D6DF00BB8E92 /* ViewModel */,
 				56E95AA72CB0B08C00CB4826 /* View */,
 				56EDFCA32CB07D30007E050C /* AppDelegate.h */,
 				56EDFCA42CB07D30007E050C /* AppDelegate.m */,
@@ -364,6 +377,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				568B9EC82CB1D86C00BB8E92 /* TMDBViewModel.m in Sources */,
 				5638FE862CB17EF0000CB789 /* TMDBUseCase.m in Sources */,
 				568B9EC32CB1C4B500BB8E92 /* MovieViewController.m in Sources */,
 				5638FE832CB17E39000CB789 /* APIRouter.m in Sources */,

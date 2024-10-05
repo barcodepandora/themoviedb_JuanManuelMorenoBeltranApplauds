@@ -13,30 +13,30 @@
 #import "APIRouter.h"
 
 // Define the errors as constants
-static NSString * const ScotiaBankErrorDomain = @"com.scotiabank.error";
+static NSString * const ApplaudoErrorDomain = @"com.Applaudo.error";
 
-typedef NS_ENUM(NSInteger, ScotiaBankErrorCode) {
-    ScotiaBankErrorWhenRequest,
-    ScotiaBankErrorWhenData,
-    ScotiaBankErrorWhenViewModel
+typedef NS_ENUM(NSInteger, ApplaudoErrorCode) {
+    ApplaudoErrorWhenRequest,
+    ApplaudoErrorWhenData,
+    ApplaudoErrorWhenViewModel
 };
 
-// Define a method to generate NSError for ScotiaBank errors
-NSError * ScotiaBankErrorWithCode(ScotiaBankErrorCode code) {
+// Define a method to generate NSError for Applaudo errors
+NSError * ApplaudoErrorWithCode(ApplaudoErrorCode code) {
     NSString *errorMessage;
     switch (code) {
-        case ScotiaBankErrorWhenRequest:
+        case ApplaudoErrorWhenRequest:
             errorMessage = @"Request failed.";
             break;
-        case ScotiaBankErrorWhenData:
+        case ApplaudoErrorWhenData:
             errorMessage = @"Data is empty.";
             break;
-        case ScotiaBankErrorWhenViewModel:
+        case ApplaudoErrorWhenViewModel:
             errorMessage = @"ViewModel error.";
             break;
     }
     
-    return [NSError errorWithDomain:ScotiaBankErrorDomain code:code userInfo:@{NSLocalizedDescriptionKey: errorMessage}];
+    return [NSError errorWithDomain:ApplaudoErrorDomain code:code userInfo:@{NSLocalizedDescriptionKey: errorMessage}];
 }
 
 //// TMDBUseCaseProtocol definition
@@ -63,25 +63,25 @@ NSError * ScotiaBankErrorWithCode(ScotiaBankErrorCode code) {
     
     NSURLSessionDataTask *task = [[NSURLSession sharedSession] dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         if (error) {
-            completion(nil, ScotiaBankErrorWithCode(ScotiaBankErrorWhenRequest));
+            completion(nil, ApplaudoErrorWithCode(ApplaudoErrorWhenRequest));
             return;
         }
         
         NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)response;
         if (httpResponse.statusCode < 200 || httpResponse.statusCode > 300) {
-            completion(nil, ScotiaBankErrorWithCode(ScotiaBankErrorWhenRequest));
+            completion(nil, ApplaudoErrorWithCode(ApplaudoErrorWhenRequest));
             return;
         }
         
         if (data.length == 0) {
-            completion(nil, ScotiaBankErrorWithCode(ScotiaBankErrorWhenData));
+            completion(nil, ApplaudoErrorWithCode(ApplaudoErrorWhenData));
             return;
         }
         
         NSError *decodeError = nil;
         TMDB *tmdb = [[TMDB alloc] initWithData:data error:&decodeError];
         if (decodeError) {
-            completion(nil, ScotiaBankErrorWithCode(ScotiaBankErrorWhenViewModel));
+            completion(nil, ApplaudoErrorWithCode(ApplaudoErrorWhenViewModel));
             return;
         }
         

@@ -6,9 +6,10 @@
 //
 
 #import "TMDBViewController.h"
-#import "TMDBUseCase.h"
+#import "TMDBViewModel.h"
 #import "TMDBCollectionViewCell.h"
 #import "MovieViewController.h"
+#import "TMDBUseCaseProtocol.h"
 
 @interface TMDBViewController ()
 
@@ -63,8 +64,12 @@
 //    self.movies = @[movie1, movie2];
     
     // Reload the collection view to display the movies
-    TMDBUseCase *useCase = [[TMDBUseCase alloc] init];
-    [useCase fetchDataWithCompletion:^(NSArray<Movie *> * _Nullable movies, NSError * _Nullable error) {
+//    TMDBUseCase *useCase = [[TMDBUseCase alloc] init];
+//    [useCase fetchDataWithCompletion:^(NSArray<Movie *> * _Nullable movies, NSError * _Nullable error) {
+        
+    TMDBViewModel *vm = [[TMDBViewModel alloc] initWithUseCase:(TMDBUseCase *)[[TMDBUseCase alloc] init]];
+    [vm fetchMoviesWithCompletion:^(NSArray<Movie *> * _Nullable movies, NSError * _Nullable error) {
+
         if (error) {
             NSLog(@"Error fetching data: %@", error.localizedDescription);
         } else {
