@@ -10,6 +10,8 @@
 		5638FE832CB17E39000CB789 /* APIRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5638FE822CB17E39000CB789 /* APIRouter.m */; };
 		5638FE862CB17EF0000CB789 /* TMDBUseCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 5638FE852CB17EF0000CB789 /* TMDBUseCase.m */; };
 		568B9EBC2CB1981500BB8E92 /* TMDBCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 568B9EBB2CB1981500BB8E92 /* TMDBCollectionViewCell.m */; };
+		568B9EC32CB1C4B500BB8E92 /* MovieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 568B9EC12CB1C4B500BB8E92 /* MovieViewController.m */; };
+		568B9EC42CB1C4B500BB8E92 /* MovieViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 568B9EC22CB1C4B500BB8E92 /* MovieViewController.xib */; };
 		56E95AA52CB0AE4500CB4826 /* TMDBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56E95AA32CB0AE4500CB4826 /* TMDBViewController.m */; };
 		56E95AA62CB0AE4500CB4826 /* TMDBViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56E95AA42CB0AE4500CB4826 /* TMDBViewController.xib */; };
 		56E95AAA2CB0B38B00CB4826 /* TMDB.m in Sources */ = {isa = PBXBuildFile; fileRef = 56E95AA92CB0B38B00CB4826 /* TMDB.m */; };
@@ -52,6 +54,9 @@
 		5638FE8B2CB182FC000CB789 /* APIRouter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APIRouter.h; sourceTree = "<group>"; };
 		568B9EBA2CB197C500BB8E92 /* TMDBCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TMDBCollectionViewCell.h; sourceTree = "<group>"; };
 		568B9EBB2CB1981500BB8E92 /* TMDBCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TMDBCollectionViewCell.m; sourceTree = "<group>"; };
+		568B9EC02CB1C4B500BB8E92 /* MovieViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieViewController.h; sourceTree = "<group>"; };
+		568B9EC12CB1C4B500BB8E92 /* MovieViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieViewController.m; sourceTree = "<group>"; };
+		568B9EC22CB1C4B500BB8E92 /* MovieViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieViewController.xib; sourceTree = "<group>"; };
 		56E95AA22CB0AE4500CB4826 /* TMDBViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TMDBViewController.h; sourceTree = "<group>"; };
 		56E95AA32CB0AE4500CB4826 /* TMDBViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TMDBViewController.m; sourceTree = "<group>"; };
 		56E95AA42CB0AE4500CB4826 /* TMDBViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TMDBViewController.xib; sourceTree = "<group>"; };
@@ -119,14 +124,41 @@
 			path = UseCase;
 			sourceTree = "<group>";
 		};
-		56E95AA72CB0B08C00CB4826 /* View */ = {
+		568B9EBD2CB1C35F00BB8E92 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
 				568B9EBA2CB197C500BB8E92 /* TMDBCollectionViewCell.h */,
 				568B9EBB2CB1981500BB8E92 /* TMDBCollectionViewCell.m */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		568B9EBE2CB1C44B00BB8E92 /* Movie */ = {
+			isa = PBXGroup;
+			children = (
+				568B9EC02CB1C4B500BB8E92 /* MovieViewController.h */,
+				568B9EC12CB1C4B500BB8E92 /* MovieViewController.m */,
+				568B9EC22CB1C4B500BB8E92 /* MovieViewController.xib */,
+			);
+			path = Movie;
+			sourceTree = "<group>";
+		};
+		568B9EBF2CB1C45500BB8E92 /* Movies */ = {
+			isa = PBXGroup;
+			children = (
 				56E95AA22CB0AE4500CB4826 /* TMDBViewController.h */,
 				56E95AA32CB0AE4500CB4826 /* TMDBViewController.m */,
 				56E95AA42CB0AE4500CB4826 /* TMDBViewController.xib */,
+				568B9EBD2CB1C35F00BB8E92 /* Cell */,
+			);
+			path = Movies;
+			sourceTree = "<group>";
+		};
+		56E95AA72CB0B08C00CB4826 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				568B9EBF2CB1C45500BB8E92 /* Movies */,
+				568B9EBE2CB1C44B00BB8E92 /* Movie */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -306,6 +338,7 @@
 				56EDFCB32CB07D33007E050C /* LaunchScreen.storyboard in Resources */,
 				56E95AA62CB0AE4500CB4826 /* TMDBViewController.xib in Resources */,
 				56EDFCB02CB07D33007E050C /* Assets.xcassets in Resources */,
+				568B9EC42CB1C4B500BB8E92 /* MovieViewController.xib in Resources */,
 				56EDFCAE2CB07D30007E050C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -332,6 +365,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5638FE862CB17EF0000CB789 /* TMDBUseCase.m in Sources */,
+				568B9EC32CB1C4B500BB8E92 /* MovieViewController.m in Sources */,
 				5638FE832CB17E39000CB789 /* APIRouter.m in Sources */,
 				56E95AAA2CB0B38B00CB4826 /* TMDB.m in Sources */,
 				56E95AA52CB0AE4500CB4826 /* TMDBViewController.m in Sources */,

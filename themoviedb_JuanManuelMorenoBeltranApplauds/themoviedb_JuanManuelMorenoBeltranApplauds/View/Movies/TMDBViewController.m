@@ -8,6 +8,7 @@
 #import "TMDBViewController.h"
 #import "TMDBUseCase.h"
 #import "TMDBCollectionViewCell.h"
+#import "MovieViewController.h"
 
 @interface TMDBViewController ()
 
@@ -99,6 +100,18 @@
     [cell configureWithMovie:movie];
     
     return cell;
+}
+
+// This method is required for UICollectionViewDelegate. It is called when a user selects an item in the collection view.
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    // Get the selected movie
+    Movie *movie = self.movies[indexPath.item];
+    
+    // Create a detail view controller
+    MovieViewController *detailViewController = [[MovieViewController alloc] initWithMovie:movie];
+    
+    // Push the detail view controller onto the navigation stack
+    [self.navigationController pushViewController:detailViewController animated:YES];
 }
 
 - (NSArray<Movie *> *)parseMoviesFromJSON:(NSArray *)jsonArray {
