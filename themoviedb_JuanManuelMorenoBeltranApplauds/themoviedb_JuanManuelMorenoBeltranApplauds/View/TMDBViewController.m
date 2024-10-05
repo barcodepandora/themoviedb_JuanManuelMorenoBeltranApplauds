@@ -6,6 +6,7 @@
 //
 
 #import "TMDBViewController.h"
+#import "TMDBUseCase.h"
 
 @interface TMDBViewController ()
 
@@ -17,6 +18,19 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     NSLog(@"OK");
+    
+    TMDBUseCase *useCase = [[TMDBUseCase alloc] init];
+    [useCase fetchDataWithCompletion:^(NSArray<Movie *> * _Nullable movies, NSError * _Nullable error) {
+        if (error) {
+            NSLog(@"Error fetching data: %@", error.localizedDescription);
+        } else {
+            NSLog(@"Successfully fetched %lu movies", (unsigned long)movies.count);
+            // Here, you can process the array of Movie objects
+            for (Movie *movie in movies) {
+                NSLog(@"Movie Title: %@", movie.title);
+            }
+        }
+    }];
 }
 
 /*

@@ -6,47 +6,59 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "TMDB.h"
+#import "Movie.h"
 
-@interface TMDB : NSObject
-
-@property (nonatomic, assign) NSInteger page;
-@property (nonatomic, strong) NSArray *results;
-
-- (instancetype)initWithPage:(NSInteger)page results:(NSArray *)results;
-
-@end
+//@interface TMDB : NSObject
+//
+//@property (nonatomic, assign) NSInteger page;
+//@property (nonatomic, strong) NSArray *results;
+//
+//- (instancetype)initWithPage:(NSInteger)page results:(NSArray *)results;
+//
+//@end
 
 @implementation TMDB
 
-- (instancetype)initWithPage:(NSInteger)page results:(NSArray *)results {
+- (instancetype)initWithData:(NSData *)data error:(NSError **)error {
     self = [super init];
     if (self) {
-        _page = page;
-        _results = results;
+        NSError *decodeError = nil;
+        NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:&decodeError];
+        
+        if (decodeError) {
+            if (error) {
+                *error = decodeError;
+            }
+            return nil;
+        }
+        
+        self.page = [json[@"page"] integerValue];
+        self.results = json[@"results"];
     }
     return self;
 }
 
 @end
 
-@interface Movie : NSObject
-
-@property (nonatomic, assign) BOOL adult;
-@property (nonatomic, copy) NSString *backdrop_path;
-@property (nonatomic, assign) NSInteger id;
-@property (nonatomic, copy) NSString *original_language;
-@property (nonatomic, copy) NSString *overview;
-@property (nonatomic, assign) double popularity;
-@property (nonatomic, copy) NSString *poster_path;
-@property (nonatomic, copy) NSString *release_date;
-@property (nonatomic, copy) NSString *title;
-@property (nonatomic, assign) BOOL video;
-@property (nonatomic, assign) double vote_average;
-@property (nonatomic, assign) NSInteger vote_count;
-
-- (instancetype)initWithAdult:(BOOL)adult backdrop_path:(NSString *)backdrop_path id:(NSInteger)id original_language:(NSString *)original_language overview:(NSString *)overview popularity:(double)popularity poster_path:(NSString *)poster_path release_date:(NSString *)release_date title:(NSString *)title video:(BOOL)video vote_average:(double)vote_average vote_count:(NSInteger)vote_count;
-
-@end
+//@interface Movie : NSObject
+//
+//@property (nonatomic, assign) BOOL adult;
+//@property (nonatomic, copy) NSString *backdrop_path;
+//@property (nonatomic, assign) NSInteger id;
+//@property (nonatomic, copy) NSString *original_language;
+//@property (nonatomic, copy) NSString *overview;
+//@property (nonatomic, assign) double popularity;
+//@property (nonatomic, copy) NSString *poster_path;
+//@property (nonatomic, copy) NSString *release_date;
+//@property (nonatomic, copy) NSString *title;
+//@property (nonatomic, assign) BOOL video;
+//@property (nonatomic, assign) double vote_average;
+//@property (nonatomic, assign) NSInteger vote_count;
+//
+//- (instancetype)initWithAdult:(BOOL)adult backdrop_path:(NSString *)backdrop_path id:(NSInteger)id original_language:(NSString *)original_language overview:(NSString *)overview popularity:(double)popularity poster_path:(NSString *)poster_path release_date:(NSString *)release_date title:(NSString *)title video:(BOOL)video vote_average:(double)vote_average vote_count:(NSInteger)vote_count;
+//
+//@end
 
 @implementation Movie
 

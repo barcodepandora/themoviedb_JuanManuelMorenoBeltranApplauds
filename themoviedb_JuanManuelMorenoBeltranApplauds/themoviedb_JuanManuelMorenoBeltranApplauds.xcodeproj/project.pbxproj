@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5638FE832CB17E39000CB789 /* APIRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5638FE822CB17E39000CB789 /* APIRouter.m */; };
+		5638FE862CB17EF0000CB789 /* TMDBUseCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 5638FE852CB17EF0000CB789 /* TMDBUseCase.m */; };
 		56E95AA52CB0AE4500CB4826 /* TMDBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56E95AA32CB0AE4500CB4826 /* TMDBViewController.m */; };
 		56E95AA62CB0AE4500CB4826 /* TMDBViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56E95AA42CB0AE4500CB4826 /* TMDBViewController.xib */; };
 		56E95AAA2CB0B38B00CB4826 /* TMDB.m in Sources */ = {isa = PBXBuildFile; fileRef = 56E95AA92CB0B38B00CB4826 /* TMDB.m */; };
@@ -40,6 +42,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5638FE822CB17E39000CB789 /* APIRouter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APIRouter.m; sourceTree = "<group>"; };
+		5638FE852CB17EF0000CB789 /* TMDBUseCase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TMDBUseCase.m; sourceTree = "<group>"; };
+		5638FE872CB17F80000CB789 /* TMDB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TMDB.h; sourceTree = "<group>"; };
+		5638FE882CB17FE7000CB789 /* Movie.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Movie.h; sourceTree = "<group>"; };
+		5638FE892CB18214000CB789 /* TMDBUseCaseProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TMDBUseCaseProtocol.h; sourceTree = "<group>"; };
+		5638FE8A2CB18238000CB789 /* TMDBUseCase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TMDBUseCase.h; sourceTree = "<group>"; };
+		5638FE8B2CB182FC000CB789 /* APIRouter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APIRouter.h; sourceTree = "<group>"; };
 		56E95AA22CB0AE4500CB4826 /* TMDBViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TMDBViewController.h; sourceTree = "<group>"; };
 		56E95AA32CB0AE4500CB4826 /* TMDBViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TMDBViewController.m; sourceTree = "<group>"; };
 		56E95AA42CB0AE4500CB4826 /* TMDBViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TMDBViewController.xib; sourceTree = "<group>"; };
@@ -88,6 +97,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5638FE812CB17E1C000CB789 /* REST */ = {
+			isa = PBXGroup;
+			children = (
+				5638FE8B2CB182FC000CB789 /* APIRouter.h */,
+				5638FE822CB17E39000CB789 /* APIRouter.m */,
+			);
+			path = REST;
+			sourceTree = "<group>";
+		};
+		5638FE842CB17ED1000CB789 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				5638FE892CB18214000CB789 /* TMDBUseCaseProtocol.h */,
+				5638FE8A2CB18238000CB789 /* TMDBUseCase.h */,
+				5638FE852CB17EF0000CB789 /* TMDBUseCase.m */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
 		56E95AA72CB0B08C00CB4826 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +129,8 @@
 		56E95AA82CB0B34600CB4826 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5638FE872CB17F80000CB789 /* TMDB.h */,
+				5638FE882CB17FE7000CB789 /* Movie.h */,
 				56E95AA92CB0B38B00CB4826 /* TMDB.m */,
 			);
 			path = Model;
@@ -129,6 +159,8 @@
 		56EDFCA22CB07D30007E050C /* themoviedb_JuanManuelMorenoBeltranApplauds */ = {
 			isa = PBXGroup;
 			children = (
+				5638FE842CB17ED1000CB789 /* UseCase */,
+				5638FE812CB17E1C000CB789 /* REST */,
 				56E95AA82CB0B34600CB4826 /* Model */,
 				56E95AA72CB0B08C00CB4826 /* View */,
 				56EDFCA32CB07D30007E050C /* AppDelegate.h */,
@@ -294,6 +326,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5638FE862CB17EF0000CB789 /* TMDBUseCase.m in Sources */,
+				5638FE832CB17E39000CB789 /* APIRouter.m in Sources */,
 				56E95AAA2CB0B38B00CB4826 /* TMDB.m in Sources */,
 				56E95AA52CB0AE4500CB4826 /* TMDBViewController.m in Sources */,
 				56EDFCAB2CB07D30007E050C /* ViewController.m in Sources */,
