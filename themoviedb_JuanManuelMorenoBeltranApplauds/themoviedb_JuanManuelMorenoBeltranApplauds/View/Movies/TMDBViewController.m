@@ -76,10 +76,6 @@
             NSLog(@"Successfully fetched %lu movies", (unsigned long)movies.count);
             // Here, you can process the array of Movie objects
             
-            for (Movie *movie in movies) {
-//                NSLog(@"Movie Title: %@", movie.title);
-                NSLog(@"Movie Title: %@", [movie valueForKey:@"title"]);
-            }
             self.movies = movies;
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self.collectionView reloadData];
@@ -117,6 +113,14 @@
     
     // Push the detail view controller onto the navigation stack
     [self.navigationController pushViewController:detailViewController animated:YES];
+}
+
+// DelegateFlowLayout Method - Configure size of each cell (including height)
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    // Example: Full width and a custom height
+    CGFloat width = 124; //collectionView.frame.size.width;
+    CGFloat height = 250.0; // Example height for the cell
+    return CGSizeMake(width, height);
 }
 
 - (NSArray<Movie *> *)parseMoviesFromJSON:(NSArray *)jsonArray {

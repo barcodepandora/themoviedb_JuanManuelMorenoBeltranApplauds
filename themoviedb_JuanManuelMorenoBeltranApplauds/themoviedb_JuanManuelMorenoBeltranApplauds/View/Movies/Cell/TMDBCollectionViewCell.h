@@ -16,8 +16,17 @@
 
 @interface TMDBCollectionViewCell : UICollectionViewCell
 
+//@property (nonatomic, strong) UILabel *titleLabel;
+//@property (nonatomic, strong) UIImageView *posterImageView;
+
 @property (nonatomic, strong) UILabel *titleLabel;
-@property (nonatomic, strong) UIImageView *posterImageView;
+@property (nonatomic, strong) UILabel *subtitleLabel;
+@property (nonatomic, strong) UIView *rectangleView;
+@property (nonatomic, strong) UILabel *movieTitleLabel;
+@property (nonatomic, strong) UILabel *releaseDateLabel;
+@property (nonatomic, strong) UILabel *ratingLabel;
+@property (nonatomic, strong) UILabel *descriptionLabel;
+@property (nonatomic, strong) UIStackView *hStackView;
 
 - (void)configureWithMovie:(Movie *)movie;
 
