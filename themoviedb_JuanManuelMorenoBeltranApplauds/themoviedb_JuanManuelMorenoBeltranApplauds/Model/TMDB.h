@@ -11,6 +11,8 @@
 
 #endif /* TMDB_h */
 
+#import <Foundation/Foundation.h>
+
 @interface TMDB : NSObject
 
 @property (nonatomic, assign) NSInteger page;

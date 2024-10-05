@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5638FE832CB17E39000CB789 /* APIRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5638FE822CB17E39000CB789 /* APIRouter.m */; };
 		5638FE862CB17EF0000CB789 /* TMDBUseCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 5638FE852CB17EF0000CB789 /* TMDBUseCase.m */; };
+		568B9EBC2CB1981500BB8E92 /* TMDBCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 568B9EBB2CB1981500BB8E92 /* TMDBCollectionViewCell.m */; };
 		56E95AA52CB0AE4500CB4826 /* TMDBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56E95AA32CB0AE4500CB4826 /* TMDBViewController.m */; };
 		56E95AA62CB0AE4500CB4826 /* TMDBViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56E95AA42CB0AE4500CB4826 /* TMDBViewController.xib */; };
 		56E95AAA2CB0B38B00CB4826 /* TMDB.m in Sources */ = {isa = PBXBuildFile; fileRef = 56E95AA92CB0B38B00CB4826 /* TMDB.m */; };
@@ -49,6 +50,8 @@
 		5638FE892CB18214000CB789 /* TMDBUseCaseProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TMDBUseCaseProtocol.h; sourceTree = "<group>"; };
 		5638FE8A2CB18238000CB789 /* TMDBUseCase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TMDBUseCase.h; sourceTree = "<group>"; };
 		5638FE8B2CB182FC000CB789 /* APIRouter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APIRouter.h; sourceTree = "<group>"; };
+		568B9EBA2CB197C500BB8E92 /* TMDBCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TMDBCollectionViewCell.h; sourceTree = "<group>"; };
+		568B9EBB2CB1981500BB8E92 /* TMDBCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TMDBCollectionViewCell.m; sourceTree = "<group>"; };
 		56E95AA22CB0AE4500CB4826 /* TMDBViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TMDBViewController.h; sourceTree = "<group>"; };
 		56E95AA32CB0AE4500CB4826 /* TMDBViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TMDBViewController.m; sourceTree = "<group>"; };
 		56E95AA42CB0AE4500CB4826 /* TMDBViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TMDBViewController.xib; sourceTree = "<group>"; };
@@ -119,6 +122,8 @@
 		56E95AA72CB0B08C00CB4826 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				568B9EBA2CB197C500BB8E92 /* TMDBCollectionViewCell.h */,
+				568B9EBB2CB1981500BB8E92 /* TMDBCollectionViewCell.m */,
 				56E95AA22CB0AE4500CB4826 /* TMDBViewController.h */,
 				56E95AA32CB0AE4500CB4826 /* TMDBViewController.m */,
 				56E95AA42CB0AE4500CB4826 /* TMDBViewController.xib */,
@@ -331,6 +336,7 @@
 				56E95AAA2CB0B38B00CB4826 /* TMDB.m in Sources */,
 				56E95AA52CB0AE4500CB4826 /* TMDBViewController.m in Sources */,
 				56EDFCAB2CB07D30007E050C /* ViewController.m in Sources */,
+				568B9EBC2CB1981500BB8E92 /* TMDBCollectionViewCell.m in Sources */,
 				56EDFCA52CB07D30007E050C /* AppDelegate.m in Sources */,
 				56EDFCB62CB07D33007E050C /* main.m in Sources */,
 				56EDFCA82CB07D30007E050C /* SceneDelegate.m in Sources */,

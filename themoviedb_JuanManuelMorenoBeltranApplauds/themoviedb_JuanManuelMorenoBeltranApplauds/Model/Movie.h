@@ -11,6 +11,8 @@
 
 #endif /* Movie_h */
 
+#import <Foundation/Foundation.h>
+
 @interface Movie : NSObject
 
 @property (nonatomic, assign) BOOL adult;
