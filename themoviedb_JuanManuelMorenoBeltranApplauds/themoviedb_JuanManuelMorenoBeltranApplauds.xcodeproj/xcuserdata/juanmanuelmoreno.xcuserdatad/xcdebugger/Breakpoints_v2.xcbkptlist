@@ -237,42 +237,10 @@
             filePath = "themoviedb_JuanManuelMorenoBeltranApplauds/ViewModel/TMDBViewModel.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
             landmarkName = "-fetchMoviesWithCompletion:"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "CD10E6BB-3619-4EA2-888B-933FA313C882 - ac1e509d74713d44"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__43-[TMDBViewModel fetchMoviesWithCompletion:]_block_invoke"
-                  moduleName = "themoviedb_JuanManuelMorenoBeltranApplauds"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/juanmanuelmoreno/Documents/themoviedb_JuanManuelMorenoBeltranApplauds/themoviedb_JuanManuelMorenoBeltranApplauds/themoviedb_JuanManuelMorenoBeltranApplauds/ViewModel/TMDBViewModel.m"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "43"
-                  endingLineNumber = "43"
-                  offsetFromSymbolStart = "176">
-               </Location>
-               <Location
-                  uuid = "CD10E6BB-3619-4EA2-888B-933FA313C882 - ac1e509d74713d67"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__43-[TMDBViewModel fetchMoviesWithCompletion:]_block_invoke"
-                  moduleName = "themoviedb_JuanManuelMorenoBeltranApplauds"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/juanmanuelmoreno/Documents/themoviedb_JuanManuelMorenoBeltranApplauds/themoviedb_JuanManuelMorenoBeltranApplauds/themoviedb_JuanManuelMorenoBeltranApplauds/ViewModel/TMDBViewModel.m"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "44"
-                  endingLineNumber = "44"
-                  offsetFromSymbolStart = "176">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -365,42 +333,10 @@
             filePath = "themoviedb_JuanManuelMorenoBeltranApplauds/ViewModel/TMDBViewModel.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
             landmarkName = "-fetchMoviesWithCompletion:"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "C00E5EAD-A2F9-4AFB-BBB2-6CC0D689FEB9 - ac1e509d74712221"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__43-[TMDBViewModel fetchMoviesWithCompletion:]_block_invoke"
-                  moduleName = "themoviedb_JuanManuelMorenoBeltranApplauds"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/juanmanuelmoreno/Documents/themoviedb_JuanManuelMorenoBeltranApplauds/themoviedb_JuanManuelMorenoBeltranApplauds/themoviedb_JuanManuelMorenoBeltranApplauds/ViewModel/TMDBViewModel.m"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "38"
-                  endingLineNumber = "38"
-                  offsetFromSymbolStart = "96">
-               </Location>
-               <Location
-                  uuid = "C00E5EAD-A2F9-4AFB-BBB2-6CC0D689FEB9 - ac1e509d74713dc0"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__43-[TMDBViewModel fetchMoviesWithCompletion:]_block_invoke"
-                  moduleName = "themoviedb_JuanManuelMorenoBeltranApplauds"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/juanmanuelmoreno/Documents/themoviedb_JuanManuelMorenoBeltranApplauds/themoviedb_JuanManuelMorenoBeltranApplauds/themoviedb_JuanManuelMorenoBeltranApplauds/ViewModel/TMDBViewModel.m"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "39"
-                  endingLineNumber = "39"
-                  offsetFromSymbolStart = "96">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -413,42 +349,10 @@
             filePath = "themoviedb_JuanManuelMorenoBeltranApplauds/ViewModel/TMDBViewModel.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
             landmarkName = "-fetchMoviesWithCompletion:"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "2B8B9526-AFA9-4EBA-B5D7-12CDD0B62F9F - ff6c0ddd6fe1ddaa"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[TMDBViewModel fetchMoviesWithCompletion:]"
-                  moduleName = "themoviedb_JuanManuelMorenoBeltranApplauds"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/juanmanuelmoreno/Documents/themoviedb_JuanManuelMorenoBeltranApplauds/themoviedb_JuanManuelMorenoBeltranApplauds/themoviedb_JuanManuelMorenoBeltranApplauds/ViewModel/TMDBViewModel.m"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "38"
-                  endingLineNumber = "38"
-                  offsetFromSymbolStart = "72">
-               </Location>
-               <Location
-                  uuid = "2B8B9526-AFA9-4EBA-B5D7-12CDD0B62F9F - ac1e509d74712221"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__43-[TMDBViewModel fetchMoviesWithCompletion:]_block_invoke"
-                  moduleName = "themoviedb_JuanManuelMorenoBeltranApplauds"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/juanmanuelmoreno/Documents/themoviedb_JuanManuelMorenoBeltranApplauds/themoviedb_JuanManuelMorenoBeltranApplauds/themoviedb_JuanManuelMorenoBeltranApplauds/ViewModel/TMDBViewModel.m"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "38"
-                  endingLineNumber = "38"
-                  offsetFromSymbolStart = "84">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
