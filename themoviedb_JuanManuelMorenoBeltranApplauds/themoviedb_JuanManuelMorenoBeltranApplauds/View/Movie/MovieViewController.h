@@ -18,6 +18,8 @@
 
 @interface MovieViewController : UIViewController
 
+@property (nonatomic, strong) NSArray *elements;
+
 - (instancetype)initWithMovie:(Movie *)movie;
 
 @end
