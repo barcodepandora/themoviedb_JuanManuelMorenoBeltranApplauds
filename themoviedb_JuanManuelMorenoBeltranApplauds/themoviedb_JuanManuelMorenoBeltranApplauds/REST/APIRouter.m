@@ -8,14 +8,14 @@
 #import <Foundation/Foundation.h>
 #import "APIRouter.h"
 
-@interface APIConstant : NSObject
-
-+ (instancetype)shared;
-
-@property (nonatomic, readonly) NSString *URLStringTMDB;
-@property (nonatomic, readonly) NSString *URLStringPoster;
-
-@end
+//@interface APIConstant : NSObject
+//
+//+ (instancetype)shared;
+//
+//@property (nonatomic, readonly) NSString *URLStringTMDB;
+//@property (nonatomic, readonly) NSString *URLStringPoster;
+//
+//@end
 
 @implementation APIConstant
 

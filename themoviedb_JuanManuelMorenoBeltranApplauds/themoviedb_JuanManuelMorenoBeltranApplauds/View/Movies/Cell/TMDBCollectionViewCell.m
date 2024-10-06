@@ -7,6 +7,7 @@
 
 #import "TMDBCollectionViewCell.h"
 #import "Movie.h"
+#import "APIRouter.h"
 
 @implementation TMDBCollectionViewCell
 
@@ -66,6 +67,11 @@
     self.rectangleView.backgroundColor = [UIColor cyanColor];
     [self.contentView addSubview:self.rectangleView];
     
+//    self.imageView = [[UIImageView alloc] initWithImage:[UIImage systemImageNamed:@"star.fill"]];
+//    starImageView.tintColor = [UIColor yellowColor];
+    [self loadImageWithURL:[movie valueForKey:@"poster_path"]];
+//    [mainStackView addArrangedSubview:starImageView];
+
     // Movie Title Label
     self.movieTitleLabel = [[UILabel alloc] init];
     NSLog(@"Movie Title: %@", [movie valueForKey:@"title"]);
@@ -105,11 +111,14 @@
     self.hStackView.alignment = UIStackViewAlignmentCenter;
     self.hStackView.spacing = 10;
     [self.contentView addSubview:self.hStackView];
+    
+    // Load image asynchronously
+//        [self loadImageWithURL:self.imageURL];
 }
 
 - (void)setupConstraints {
     // Set translatesAutoresizingMaskIntoConstraints to NO for all subviews
-    for (UIView *view in @[self.rectangleView, self.movieTitleLabel, self.hStackView, self.descriptionLabel]) {
+    for (UIView *view in @[self.movieTitleLabel, self.hStackView, self.descriptionLabel]) {
 //        for (UIView *view in @[self.titleLabel, self.subtitleLabel, self.rectangleView, self.movieTitleLabel, self.hStackView, self.descriptionLabel]) {
 
         view.translatesAutoresizingMaskIntoConstraints = NO;
@@ -128,11 +137,13 @@
 //        [self.subtitleLabel.trailingAnchor constraintEqualToAnchor:self.contentView.trailingAnchor constant:-20],
         
         // Rectangle view constraints
-//        [self.rectangleView.topAnchor constraintEqualToAnchor:self.subtitleLabel.bottomAnchor constant:10],
-        [self.rectangleView.leadingAnchor constraintEqualToAnchor:self.contentView.leadingAnchor constant:20],
-        [self.rectangleView.widthAnchor constraintEqualToConstant:182],
-        [self.rectangleView.heightAnchor constraintEqualToConstant:100],
-        
+//        [self.rectangleView.leadingAnchor constraintEqualToAnchor:self.contentView.leadingAnchor constant:20],
+//        [self.rectangleView.widthAnchor constraintEqualToConstant:182],
+//        [self.rectangleView.heightAnchor constraintEqualToConstant:100],
+
+        // Ajusta el tamaño de la imagen (equivalente a .font(.largeTitle) en SwiftUI)
+//        [starImageView.heightAnchor constraintEqualToConstant:30].active = YES;
+
         // Movie title label constraints
         [self.movieTitleLabel.topAnchor constraintEqualToAnchor:self.rectangleView.bottomAnchor constant:10],
         [self.movieTitleLabel.centerXAnchor constraintEqualToAnchor:self.rectangleView.centerXAnchor],
@@ -148,6 +159,34 @@
         [self.descriptionLabel.bottomAnchor constraintEqualToAnchor:self.contentView.bottomAnchor constant:-10],
         [self.descriptionLabel.heightAnchor constraintEqualToConstant:56]
     ]];
+}
+
+- (void)loadImageWithURL:(NSString *)url {
+    NSString *urlString = [APIConstant.shared.URLStringPoster stringByAppendingString:url];
+    NSURL *imageURL = [NSURL URLWithString:urlString];
+    
+    // Load image asynchronously
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        NSData *imageData = [NSData dataWithContentsOfURL:imageURL];
+        UIImage *image = [UIImage imageWithData:imageData];
+        
+        // Update UI on main thread
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.imageView = [[UIImageView alloc] initWithImage:image];
+            if (self.imageView != nil) {
+                self.imageView.contentMode = UIViewContentModeScaleAspectFit;
+                [self.contentView addSubview:self.imageView];
+                for (UIView *view in @[self.imageView]) {
+                    view.translatesAutoresizingMaskIntoConstraints = NO;
+                }
+                [NSLayoutConstraint activateConstraints:@[
+                    [self.imageView.leadingAnchor constraintEqualToAnchor:self.contentView.leadingAnchor constant:20],
+                    [self.imageView.widthAnchor constraintEqualToConstant:182],
+                    [self.imageView.heightAnchor constraintEqualToConstant:100]
+                ]];
+            }
+        });
+    });
 }
 
 @end

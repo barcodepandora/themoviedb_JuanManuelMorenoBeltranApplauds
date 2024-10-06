@@ -22,6 +22,7 @@
 @property (nonatomic, strong) UILabel *titleLabel;
 @property (nonatomic, strong) UILabel *subtitleLabel;
 @property (nonatomic, strong) UIView *rectangleView;
+@property (nonatomic, strong) UIImageView *imageView;
 @property (nonatomic, strong) UILabel *movieTitleLabel;
 @property (nonatomic, strong) UILabel *releaseDateLabel;
 @property (nonatomic, strong) UILabel *ratingLabel;

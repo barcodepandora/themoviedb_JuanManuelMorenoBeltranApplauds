@@ -20,3 +20,12 @@ typedef NS_ENUM(NSUInteger, APIRouter) {
 + (NSURLRequest *)requestForRoute:(APIRouter)route;
 
 @end
+
+@interface APIConstant : NSObject
+
++ (instancetype)shared;
+
+@property (nonatomic, readonly) NSString *URLStringTMDB;
+@property (nonatomic, readonly) NSString *URLStringPoster;
+
+@end
