@@ -39,25 +39,8 @@ NSError * ApplaudoErrorWithCode(ApplaudoErrorCode code) {
     return [NSError errorWithDomain:ApplaudoErrorDomain code:code userInfo:@{NSLocalizedDescriptionKey: errorMessage}];
 }
 
-//// TMDBUseCaseProtocol definition
-//@protocol TMDBUseCaseProtocol <NSObject>
-//
-//- (void)fetchDataWithCompletion:(void (^)(NSArray<Movie *> * _Nullable movies, NSError * _Nullable error))completion;
-//- (NSArray<Movie *> *)getDataWithFilter:(Handler *)filterForMovies order:(MovieOrder)order filter:(NSString *)filter;
-//- (NSArray<Movie *> *)orderDataWithMovies:(NSArray<Movie *> *)moviesForOrder order:(MovieOrder)order filter:(NSString *)filter;
-//
-//@end
-
-//// TMDBUseCase class implementation
-//@interface TMDBUseCase : NSObject <TMDBUseCaseProtocol>
-//
-//@property (nonatomic, strong) NSArray<Movie *> *movies;
-//
-//@end
-
 @implementation TMDBUseCase
 
-// Fetch data method using completion handler
 - (void)fetchDataWithCompletion:(void (^)(NSArray<Movie *> * _Nullable movies, NSError * _Nullable error))completion {
     NSURLRequest *request = [APIRouterHelper requestForRoute:APIRouterGetData];
     

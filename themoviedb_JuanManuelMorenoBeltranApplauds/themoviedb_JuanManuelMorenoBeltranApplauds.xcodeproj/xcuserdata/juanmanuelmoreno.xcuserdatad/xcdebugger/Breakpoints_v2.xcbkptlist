@@ -214,22 +214,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "8CCCD4DD-884A-418B-A027-5038B8607982"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "themoviedb_JuanManuelMorenoBeltranApplauds/View/Movies/TMDBViewController.m"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "109"
-            endingLineNumber = "109"
-            landmarkName = "-collectionView:didSelectItemAtIndexPath:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "CD10E6BB-3619-4EA2-888B-933FA313C882"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -237,58 +221,10 @@
             filePath = "themoviedb_JuanManuelMorenoBeltranApplauds/ViewModel/TMDBViewModel.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
             landmarkName = "-fetchMoviesWithCompletion:"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "5CC6B79E-803C-4120-A59F-EBE02A09AF4A"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "themoviedb_JuanManuelMorenoBeltranApplauds/View/Movies/TMDBViewController.m"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "71"
-            endingLineNumber = "71"
-            landmarkName = "-fetchMovies"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "5CC6B79E-803C-4120-A59F-EBE02A09AF4A - 883bad6eb49fc66d"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[TMDBViewController fetchMovies]"
-                  moduleName = "themoviedb_JuanManuelMorenoBeltranApplauds"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/juanmanuelmoreno/Documents/themoviedb_JuanManuelMorenoBeltranApplauds/themoviedb_JuanManuelMorenoBeltranApplauds/themoviedb_JuanManuelMorenoBeltranApplauds/View/Movies/TMDBViewController.m"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "70"
-                  endingLineNumber = "70"
-                  offsetFromSymbolStart = "60">
-               </Location>
-               <Location
-                  uuid = "5CC6B79E-803C-4120-A59F-EBE02A09AF4A - a3e7617f48d907e5"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__33-[TMDBViewController fetchMovies]_block_invoke"
-                  moduleName = "themoviedb_JuanManuelMorenoBeltranApplauds"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/juanmanuelmoreno/Documents/themoviedb_JuanManuelMorenoBeltranApplauds/themoviedb_JuanManuelMorenoBeltranApplauds/themoviedb_JuanManuelMorenoBeltranApplauds/View/Movies/TMDBViewController.m"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "70"
-                  endingLineNumber = "70"
-                  offsetFromSymbolStart = "112">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -301,8 +237,8 @@
             filePath = "themoviedb_JuanManuelMorenoBeltranApplauds/UseCase/TMDBUseCase.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "62"
-            endingLineNumber = "62"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
             landmarkName = "-fetchDataWithCompletion:"
             landmarkType = "7">
          </BreakpointContent>
@@ -317,8 +253,8 @@
             filePath = "themoviedb_JuanManuelMorenoBeltranApplauds/UseCase/TMDBUseCase.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "82"
-            endingLineNumber = "82"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
             landmarkName = "-fetchDataWithCompletion:"
             landmarkType = "7">
          </BreakpointContent>
@@ -333,8 +269,8 @@
             filePath = "themoviedb_JuanManuelMorenoBeltranApplauds/ViewModel/TMDBViewModel.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
             landmarkName = "-fetchMoviesWithCompletion:"
             landmarkType = "7">
          </BreakpointContent>
@@ -349,8 +285,8 @@
             filePath = "themoviedb_JuanManuelMorenoBeltranApplauds/ViewModel/TMDBViewModel.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
             landmarkName = "-fetchMoviesWithCompletion:"
             landmarkType = "7">
          </BreakpointContent>
@@ -365,8 +301,8 @@
             filePath = "themoviedb_JuanManuelMorenoBeltranApplauds/UseCase/TMDBUseCase.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "89"
-            endingLineNumber = "89"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
             landmarkName = "-fetchDataWithCompletion:"
             landmarkType = "7">
          </BreakpointContent>
@@ -381,8 +317,8 @@
             filePath = "themoviedb_JuanManuelMorenoBeltranApplauds/View/Movies/Cell/TMDBCollectionViewCell.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "166"
-            endingLineNumber = "166"
+            startingLineNumber = "121"
+            endingLineNumber = "121"
             landmarkName = "-loadImageWithURL:"
             landmarkType = "7">
          </BreakpointContent>
@@ -397,8 +333,8 @@
             filePath = "themoviedb_JuanManuelMorenoBeltranApplauds/View/Movies/Cell/TMDBCollectionViewCell.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "72"
-            endingLineNumber = "72"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
             landmarkName = "-setupViews:"
             landmarkType = "7">
          </BreakpointContent>
@@ -413,8 +349,8 @@
             filePath = "themoviedb_JuanManuelMorenoBeltranApplauds/View/Movies/Cell/TMDBCollectionViewCell.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "170"
-            endingLineNumber = "170"
+            startingLineNumber = "125"
+            endingLineNumber = "125"
             landmarkName = "-loadImageWithURL:"
             landmarkType = "7">
          </BreakpointContent>
@@ -429,8 +365,8 @@
             filePath = "themoviedb_JuanManuelMorenoBeltranApplauds/View/Movies/Cell/TMDBCollectionViewCell.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "175"
-            endingLineNumber = "175"
+            startingLineNumber = "130"
+            endingLineNumber = "130"
             landmarkName = "-loadImageWithURL:"
             landmarkType = "7">
          </BreakpointContent>
@@ -438,16 +374,64 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "4CD693F6-377E-4AAF-A3BF-A6A4D3136B2F"
+            uuid = "4E1CE687-8097-4D6B-9447-98FD4E011223"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "themoviedb_JuanManuelMorenoBeltranApplauds/View/Movie/MovieViewController.m"
+            filePath = "themoviedb_JuanManuelMorenoBeltranApplauds/View/Movies/Cell/TMDBCollectionViewCell.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "133"
-            endingLineNumber = "133"
-            landmarkName = "-loadImageWithURL:"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "-setupViews:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "87DE19D2-2639-4475-A959-7AEFD0F6E1CC"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "themoviedb_JuanManuelMorenoBeltranApplauds/View/Movies/Cell/TMDBCollectionViewCell.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "-setupViews:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "53F7957D-046B-4174-BB87-CFB2991033B4"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "themoviedb_JuanManuelMorenoBeltranApplauds/View/Movies/TMDBViewController.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
+            landmarkName = "-collectionView:cellForItemAtIndexPath:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "27BBFF8F-0D53-4483-A35F-EEA537084B54"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "themoviedb_JuanManuelMorenoBeltranApplauds/View/Movies/TMDBViewController.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
+            landmarkName = "-fetchMovies"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

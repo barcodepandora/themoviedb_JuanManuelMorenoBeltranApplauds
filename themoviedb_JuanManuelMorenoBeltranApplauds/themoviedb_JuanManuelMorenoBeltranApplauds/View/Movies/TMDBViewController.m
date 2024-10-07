@@ -19,18 +19,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
-    NSLog(@"OK");
-    
-    // Register custom cell
     [self.collectionView registerClass:[TMDBCollectionViewCell class] forCellWithReuseIdentifier:@"MovieCell"];
-    
-    // Set up data source and delegate
     self.collectionView.dataSource = self;
     self.collectionView.delegate = self;
-    
-    // Initialize movies array
-    [self fetchMovies]; // You can implement this to get your data
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self fetchMovies];
 }
 
 - (void)fetchMovies {
@@ -62,89 +58,50 @@
 //                                      vote_count:2000];
 //    
 //    self.movies = @[movie1, movie2];
-    
-    // Reload the collection view to display the movies
-//    TMDBUseCase *useCase = [[TMDBUseCase alloc] init];
-//    [useCase fetchDataWithCompletion:^(NSArray<Movie *> * _Nullable movies, NSError * _Nullable error) {
-        
-    TMDBViewModel *vm = [[TMDBViewModel alloc] initWithUseCase:(TMDBUseCase *)[[TMDBUseCase alloc] init]];
-    [vm fetchMoviesWithCompletion:^(NSArray<Movie *> * _Nullable movies, NSError * _Nullable error) {
-
-        if (error) {
-            NSLog(@"Error fetching data: %@", error.localizedDescription);
-        } else {
-            NSLog(@"Successfully fetched %lu movies", (unsigned long)movies.count);
-            // Here, you can process the array of Movie objects
-            
-            self.movies = movies;
-            dispatch_async(dispatch_get_main_queue(), ^{
-                [self.collectionView reloadData];
-            });
-//            [self.collectionView reloadData];
-        }
-    }];
-    
-    
+    if (self.movies.count == 0) {
+        TMDBViewModel *vm = [[TMDBViewModel alloc] initWithUseCase:(TMDBUseCase *)[[TMDBUseCase alloc] init]];
+        [vm fetchMoviesWithCompletion:^(NSArray<Movie *> * _Nullable movies, NSError * _Nullable error) {
+            if (error) {
+                NSLog(@"Error fetching data: %@", error.localizedDescription);
+            } else {
+                NSLog(@"Successfully fetched %lu movies", (unsigned long)movies.count);
+    //            self.movies = movies;
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    self.movies = movies;
+                    [self.collectionView reloadData];
+                });
+            }
+        }];
+        self.movies = [[NSArray alloc] init];
+        [self.collectionView reloadData];
+        [self.collectionView.collectionViewLayout invalidateLayout];
+    }
 }
 
-// This method is required for UICollectionViewDataSource. It returns the number of items in the section.
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return self.movies.count;
 }
 
-// This method is required for UICollectionViewDataSource. It returns the cell for a given index path.
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     TMDBCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"MovieCell" forIndexPath:indexPath];
-    
-    // Configure the cell with movie data
     Movie *movie = self.movies[indexPath.item];
     [cell configureWithMovie:movie];
-    
     return cell;
 }
 
-// This method is required for UICollectionViewDelegate. It is called when a user selects an item in the collection view.
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    // Get the selected movie
     Movie *movie = self.movies[indexPath.item];
-    
-    // Create a detail view controller
     MovieViewController *detailViewController = [[MovieViewController alloc] initWithMovie:movie];
-    
-    // Push the detail view controller onto the navigation stack
     [self.navigationController pushViewController:detailViewController animated:YES];
 }
 
-// DelegateFlowLayout Method - Configure size of each cell (including height)
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     // Example: Full width and a custom height
-    CGFloat width = 124; //collectionView.frame.size.width;
-    CGFloat height = 250.0; // Example height for the cell
+    CGFloat width = 180; //collectionView.frame.size.width;
+    CGFloat height = 350; // Example height for the cell
     return CGSizeMake(width, height);
 }
 
-- (NSArray<Movie *> *)parseMoviesFromJSON:(NSArray *)jsonArray {
-    NSMutableArray<Movie *> *moviesArray = [NSMutableArray array];
-    
-    for (NSDictionary *dict in jsonArray) {
-        Movie *movie = [[Movie alloc] initWithAdult:[dict[@"adult"] boolValue]
-                                      backdrop_path:dict[@"backdrop_path"]
-                                                 id:[dict[@"id"] integerValue]
-                                  original_language:dict[@"original_language"]
-                                           overview:dict[@"overview"]
-                                         popularity:[dict[@"popularity"] doubleValue]
-                                        poster_path:dict[@"poster_path"]
-                                       release_date:dict[@"release_date"]
-                                              title:dict[@"title"]
-                                              video:[dict[@"video"] boolValue]
-                                       vote_average:[dict[@"vote_average"] doubleValue]
-                                         vote_count:[dict[@"vote_count"] integerValue]];
-        
-        [moviesArray addObject:movie];
-    }
-    
-    return [moviesArray copy];
-}
 
 /*
 #pragma mark - Navigation

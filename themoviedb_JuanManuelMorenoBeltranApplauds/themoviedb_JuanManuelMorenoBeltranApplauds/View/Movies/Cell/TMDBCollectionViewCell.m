@@ -11,74 +11,30 @@
 
 @implementation TMDBCollectionViewCell
 
-//- (instancetype)initWithFrame:(CGRect)frame {
-//    self = [super initWithFrame:frame];
-//    if (self) {
-//        // Initialize the title label and poster image view
-////        self.posterImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, frame.size.width, frame.size.height - 30)];
-//        [self.contentView addSubview:self.posterImageView];
-//        
-//        self.titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, frame.size.height - 30, frame.size.width, 30)];
-//        self.titleLabel.textAlignment = NSTextAlignmentCenter;
-//        [self.contentView addSubview:self.titleLabel];
-//    }
-//    return self;
-//}
-//
-// Configure the cell with movie data
 - (void)configureWithMovie:(Movie *)movie {
-//    self.titleLabel.text = [movie valueForKey:@"title"];
     if (self) {
         [self setupViews:movie];
         [self setupConstraints];
     }
-    // Assuming you have a method to fetch image data from the poster path
-    // For simplicity, you can use a placeholder image
-//    self.posterImageView.image = [UIImage imageNamed:@"placeholder"];
-    // You can asynchronously load images from the movie.poster_path if needed
 }
 
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
-//    if (self) {
-//        [self setupViews:];
-//        [self setupConstraints];
-//    }
     return self;
 }
 
 - (void)setupViews:(Movie *)movie {
-    // Title Label
-//    self.titleLabel = [[UILabel alloc] init];
-//    self.titleLabel.text = @"Now you’ll be asked to enter your credit card information to prevent multiple free trials for one person.";
-//    self.titleLabel.font = [UIFont preferredFontForTextStyle:UIFontTextStyleTitle2];
-//    self.titleLabel.numberOfLines = 0;
-//    [self.contentView addSubview:self.titleLabel];
-//    
-//    // Subtitle Label
-//    self.subtitleLabel = [[UILabel alloc] init];
-//    self.subtitleLabel.text = @"No worries, nothing will be charged for now. You can cancel your plan anytime from your profile page!";
-//    self.subtitleLabel.font = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
-//    self.subtitleLabel.numberOfLines = 0;
-//    [self.contentView addSubview:self.subtitleLabel];
-    
-    // Rectangle View
-    self.rectangleView = [[UIView alloc] init];
-    self.rectangleView.backgroundColor = [UIColor cyanColor];
-    [self.contentView addSubview:self.rectangleView];
-    
-//    self.imageView = [[UIImageView alloc] initWithImage:[UIImage systemImageNamed:@"star.fill"]];
 //    starImageView.tintColor = [UIColor yellowColor];
-    [self loadImageWithURL:[movie valueForKey:@"poster_path"]];
+//    [self loadImageWithURL:[movie valueForKey:@"poster_path"]];
 //    [mainStackView addArrangedSubview:starImageView];
 
     // Movie Title Label
     self.movieTitleLabel = [[UILabel alloc] init];
-    NSLog(@"Movie Title: %@", [movie valueForKey:@"title"]);
+//    NSLog(@"Movie Title: %@", [movie valueForKey:@"title"]);
     self.movieTitleLabel.text = [movie valueForKey:@"title"]; //@"Insatiable";
     self.movieTitleLabel.font = [UIFont boldSystemFontOfSize:13.0];
     self.movieTitleLabel.textColor = [UIColor greenColor];
-    self.movieTitleLabel.textAlignment = NSTextAlignmentCenter;
+    self.movieTitleLabel.textAlignment = NSTextAlignmentLeft;
     [self.contentView addSubview:self.movieTitleLabel];
     
     // Release Date Label
@@ -99,7 +55,7 @@
     
     // Description Label
     self.descriptionLabel = [[UILabel alloc] init];
-    self.descriptionLabel.text = @"A bullied teenager turns to beauty pageants as a way to exact her revenge, with the help of a disgraced coach who so...";
+    self.descriptionLabel.text = [movie valueForKey:@"overview"];
     self.descriptionLabel.font = [UIFont systemFontOfSize:10.0];
     self.descriptionLabel.textColor = [UIColor whiteColor];
     self.descriptionLabel.numberOfLines = 0;
@@ -112,8 +68,7 @@
     self.hStackView.spacing = 10;
     [self.contentView addSubview:self.hStackView];
     
-    // Load image asynchronously
-//        [self loadImageWithURL:self.imageURL];
+    [self loadImageWithURL:[movie valueForKey:@"poster_path"]];
 }
 
 - (void)setupConstraints {
@@ -145,12 +100,12 @@
 //        [starImageView.heightAnchor constraintEqualToConstant:30].active = YES;
 
         // Movie title label constraints
-        [self.movieTitleLabel.topAnchor constraintEqualToAnchor:self.rectangleView.bottomAnchor constant:10],
-        [self.movieTitleLabel.centerXAnchor constraintEqualToAnchor:self.rectangleView.centerXAnchor],
+//        [self.movieTitleLabel.topAnchor constraintEqualToAnchor:self.rectangleView.bottomAnchor constant:10],
+//        [self.movieTitleLabel.centerXAnchor constraintEqualToAnchor:self.rectangleView.centerXAnchor],
         
         // HStackView constraints
         [self.hStackView.topAnchor constraintEqualToAnchor:self.movieTitleLabel.bottomAnchor constant:10],
-        [self.hStackView.centerXAnchor constraintEqualToAnchor:self.rectangleView.centerXAnchor],
+//        [self.hStackView.centerXAnchor constraintEqualToAnchor:self.rectangleView.centerXAnchor],
         
         // Description label constraints
         [self.descriptionLabel.topAnchor constraintEqualToAnchor:self.hStackView.bottomAnchor constant:10],
@@ -180,9 +135,9 @@
                     view.translatesAutoresizingMaskIntoConstraints = NO;
                 }
                 [NSLayoutConstraint activateConstraints:@[
-                    [self.imageView.leadingAnchor constraintEqualToAnchor:self.contentView.leadingAnchor constant:20],
-                    [self.imageView.widthAnchor constraintEqualToConstant:182],
-                    [self.imageView.heightAnchor constraintEqualToConstant:100]
+//                    [self.imageView.leadingAnchor constraintEqualToAnchor:self.contentView.leadingAnchor constant:20],
+                    [self.imageView.widthAnchor constraintEqualToConstant:200],
+                    [self.imageView.heightAnchor constraintEqualToConstant:220]
                 ]];
             }
         });
