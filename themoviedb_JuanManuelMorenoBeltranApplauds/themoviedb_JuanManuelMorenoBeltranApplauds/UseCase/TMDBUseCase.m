@@ -9,7 +9,7 @@
 #import "TMDBUseCaseProtocol.h"
 #import "TMDBUseCase.h"
 #import "TMDB.h"
-#import "Movie.h"
+#import "TVShow.h"
 #import "APIRouter.h"
 
 static NSString * const ApplaudoErrorDomain = @"com.Applaudo.error";
@@ -39,7 +39,7 @@ NSError * ApplaudoErrorWithCode(ApplaudoErrorCode code) {
 
 @implementation TMDBUseCase
 
-- (void)fetchDataWithCompletion:(void (^)(NSArray<Movie *> * _Nullable movies, NSError * _Nullable error))completion {
+- (void)fetchDataWithCompletion:(void (^)(NSArray<TVShow *> * _Nullable tvshows, NSError * _Nullable error))completion {
     NSURLRequest *request = [APIRouterHelper requestForRoute:APIRouterGetData];
     
     NSURLSessionDataTask *task = [[NSURLSession sharedSession] dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
@@ -66,8 +66,8 @@ NSError * ApplaudoErrorWithCode(ApplaudoErrorCode code) {
             return;
         }
         
-        self.movies = tmdb.results;
-        completion(self.movies, nil);
+        self.tvshows = tmdb.results;
+        completion(self.tvshows, nil);
     }];
     
     [task resume];

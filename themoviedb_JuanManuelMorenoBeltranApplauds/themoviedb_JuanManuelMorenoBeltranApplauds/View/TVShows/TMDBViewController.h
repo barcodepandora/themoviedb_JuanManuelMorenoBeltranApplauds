@@ -6,14 +6,20 @@
 //
 
 #import "ViewController.h"
-#import "Movie.h"
+#import "TVShow.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface TMDBViewController : ViewController
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
-@property (nonatomic, strong) NSArray<Movie *> *movies;
+@property (nonatomic, strong) NSArray<TVShow *> *tvshows;
+@property (nonatomic) NSUInteger selectedIndex;
+
+@property (weak, nonatomic) IBOutlet UIView *menu;
+
+- (void)callFunction1;
+- (void)callFunction2;
 
 @end
 

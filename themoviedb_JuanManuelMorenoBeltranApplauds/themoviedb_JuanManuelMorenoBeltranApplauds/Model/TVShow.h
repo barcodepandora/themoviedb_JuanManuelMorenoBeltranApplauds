@@ -1,19 +1,19 @@
 //
-//  Movie.h
+//  TVShow.h
 //  themoviedb_JuanManuelMorenoBeltranApplauds
 //
 //  Created by Juan Manuel Moreno on 5/10/24.
 //
 
-#ifndef Movie_h
-#define Movie_h
+#ifndef TVShow_h
+#define TVShow_h
 
 
-#endif /* Movie_h */
+#endif /* TVShow_h */
 
 #import <Foundation/Foundation.h>
 
-@interface Movie : NSObject
+@interface TVShow : NSObject
 
 @property (nonatomic, assign) BOOL adult;
 @property (nonatomic, copy) NSString *backdrop_path;

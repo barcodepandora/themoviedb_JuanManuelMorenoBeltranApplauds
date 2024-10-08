@@ -12,15 +12,15 @@
 #endif /* TMDBViewModel_h */
 
 #import "TMDBUseCase.h"
-#import "Movie.h"
+#import "TVShow.h"
 
 @interface TMDBViewModel : NSObject
 
 @property (nonatomic, strong) TMDBUseCase *useCase;
-@property (nonatomic, strong) NSArray<Movie *> *movies;
+@property (nonatomic, strong) NSArray<TVShow *> *tvshows;
 
 - (instancetype)initWithUseCase:(TMDBUseCase *)useCase;
 
-- (void)fetchMoviesWithCompletion:(void (^)(NSArray<Movie *> * _Nullable movies, NSError * _Nullable error))completion;
+- (void)fetchTVShowsWithCompletion:(void (^)(NSArray<TVShow *> * _Nullable tvshows, NSError * _Nullable error))completion;
 
 @end

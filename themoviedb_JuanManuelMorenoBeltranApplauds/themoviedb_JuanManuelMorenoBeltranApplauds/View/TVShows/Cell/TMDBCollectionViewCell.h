@@ -12,7 +12,7 @@
 #endif /* TMDBCollectionViewCell_h */
 
 #import <UIKit/UIKit.h>
-#import "Movie.h"
+#import "TVShow.h"
 
 @interface TMDBCollectionViewCell : UICollectionViewCell
 
@@ -29,6 +29,6 @@
 @property (nonatomic, strong) UILabel *descriptionLabel;
 @property (nonatomic, strong) UIStackView *hStackView;
 
-- (void)configureWithMovie:(Movie *)movie;
+- (void)configureWithTVShow:(TVShow *)movie;
 
 @end

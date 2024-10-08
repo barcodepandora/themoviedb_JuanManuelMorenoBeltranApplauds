@@ -13,11 +13,11 @@
 
 #import <Foundation/Foundation.h>
 #import "TMDBUseCaseProtocol.h"
-#import "Movie.h"
+#import "TVShow.h"
 
 // TMDBUseCase class implementation
 @interface TMDBUseCase : NSObject <TMDBUseCaseProtocol>
 
-@property (nonatomic, strong) NSArray<Movie *> *movies;
+@property (nonatomic, strong) NSArray<TVShow *> *tvshows;
 
 @end

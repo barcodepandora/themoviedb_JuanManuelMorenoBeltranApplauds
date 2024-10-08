@@ -11,7 +11,7 @@
 		5638FE862CB17EF0000CB789 /* TMDBUseCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 5638FE852CB17EF0000CB789 /* TMDBUseCase.m */; };
 		5656BFAD2CB36E9A009954C1 /* TMDB Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 5656BFAC2CB36E99009954C1 /* TMDB Logo.png */; };
 		568B9EBC2CB1981500BB8E92 /* TMDBCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 568B9EBB2CB1981500BB8E92 /* TMDBCollectionViewCell.m */; };
-		568B9EC32CB1C4B500BB8E92 /* MovieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 568B9EC12CB1C4B500BB8E92 /* MovieViewController.m */; };
+		568B9EC32CB1C4B500BB8E92 /* TVShowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 568B9EC12CB1C4B500BB8E92 /* TVShowViewController.m */; };
 		568B9EC42CB1C4B500BB8E92 /* MovieViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 568B9EC22CB1C4B500BB8E92 /* MovieViewController.xib */; };
 		568B9EC82CB1D86C00BB8E92 /* TMDBViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 568B9EC72CB1D86C00BB8E92 /* TMDBViewModel.m */; };
 		56E95AA52CB0AE4500CB4826 /* TMDBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56E95AA32CB0AE4500CB4826 /* TMDBViewController.m */; };
@@ -50,15 +50,15 @@
 		5638FE822CB17E39000CB789 /* APIRouter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APIRouter.m; sourceTree = "<group>"; };
 		5638FE852CB17EF0000CB789 /* TMDBUseCase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TMDBUseCase.m; sourceTree = "<group>"; };
 		5638FE872CB17F80000CB789 /* TMDB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TMDB.h; sourceTree = "<group>"; };
-		5638FE882CB17FE7000CB789 /* Movie.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Movie.h; sourceTree = "<group>"; };
+		5638FE882CB17FE7000CB789 /* TVShow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TVShow.h; sourceTree = "<group>"; };
 		5638FE892CB18214000CB789 /* TMDBUseCaseProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TMDBUseCaseProtocol.h; sourceTree = "<group>"; };
 		5638FE8A2CB18238000CB789 /* TMDBUseCase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TMDBUseCase.h; sourceTree = "<group>"; };
 		5638FE8B2CB182FC000CB789 /* APIRouter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APIRouter.h; sourceTree = "<group>"; };
 		5656BFAC2CB36E99009954C1 /* TMDB Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "TMDB Logo.png"; path = "../../../../Desktop/TMDB Logo.png"; sourceTree = "<group>"; };
 		568B9EBA2CB197C500BB8E92 /* TMDBCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TMDBCollectionViewCell.h; sourceTree = "<group>"; };
 		568B9EBB2CB1981500BB8E92 /* TMDBCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TMDBCollectionViewCell.m; sourceTree = "<group>"; };
-		568B9EC02CB1C4B500BB8E92 /* MovieViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieViewController.h; sourceTree = "<group>"; };
-		568B9EC12CB1C4B500BB8E92 /* MovieViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieViewController.m; sourceTree = "<group>"; };
+		568B9EC02CB1C4B500BB8E92 /* TVShowViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TVShowViewController.h; sourceTree = "<group>"; };
+		568B9EC12CB1C4B500BB8E92 /* TVShowViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TVShowViewController.m; sourceTree = "<group>"; };
 		568B9EC22CB1C4B500BB8E92 /* MovieViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieViewController.xib; sourceTree = "<group>"; };
 		568B9EC62CB1D73200BB8E92 /* TMDBViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TMDBViewModel.h; sourceTree = "<group>"; };
 		568B9EC72CB1D86C00BB8E92 /* TMDBViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TMDBViewModel.m; sourceTree = "<group>"; };
@@ -138,17 +138,17 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
-		568B9EBE2CB1C44B00BB8E92 /* Movie */ = {
+		568B9EBE2CB1C44B00BB8E92 /* TVShow */ = {
 			isa = PBXGroup;
 			children = (
-				568B9EC02CB1C4B500BB8E92 /* MovieViewController.h */,
-				568B9EC12CB1C4B500BB8E92 /* MovieViewController.m */,
+				568B9EC02CB1C4B500BB8E92 /* TVShowViewController.h */,
+				568B9EC12CB1C4B500BB8E92 /* TVShowViewController.m */,
 				568B9EC22CB1C4B500BB8E92 /* MovieViewController.xib */,
 			);
-			path = Movie;
+			path = TVShow;
 			sourceTree = "<group>";
 		};
-		568B9EBF2CB1C45500BB8E92 /* Movies */ = {
+		568B9EBF2CB1C45500BB8E92 /* TVShows */ = {
 			isa = PBXGroup;
 			children = (
 				56E95AA22CB0AE4500CB4826 /* TMDBViewController.h */,
@@ -156,7 +156,7 @@
 				56E95AA42CB0AE4500CB4826 /* TMDBViewController.xib */,
 				568B9EBD2CB1C35F00BB8E92 /* Cell */,
 			);
-			path = Movies;
+			path = TVShows;
 			sourceTree = "<group>";
 		};
 		568B9EC52CB1D6DF00BB8E92 /* ViewModel */ = {
@@ -171,8 +171,8 @@
 		56E95AA72CB0B08C00CB4826 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				568B9EBF2CB1C45500BB8E92 /* Movies */,
-				568B9EBE2CB1C44B00BB8E92 /* Movie */,
+				568B9EBF2CB1C45500BB8E92 /* TVShows */,
+				568B9EBE2CB1C44B00BB8E92 /* TVShow */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -181,7 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				5638FE872CB17F80000CB789 /* TMDB.h */,
-				5638FE882CB17FE7000CB789 /* Movie.h */,
+				5638FE882CB17FE7000CB789 /* TVShow.h */,
 				56E95AA92CB0B38B00CB4826 /* TMDB.m */,
 			);
 			path = Model;
@@ -383,7 +383,7 @@
 			files = (
 				568B9EC82CB1D86C00BB8E92 /* TMDBViewModel.m in Sources */,
 				5638FE862CB17EF0000CB789 /* TMDBUseCase.m in Sources */,
-				568B9EC32CB1C4B500BB8E92 /* MovieViewController.m in Sources */,
+				568B9EC32CB1C4B500BB8E92 /* TVShowViewController.m in Sources */,
 				5638FE832CB17E39000CB789 /* APIRouter.m in Sources */,
 				56E95AAA2CB0B38B00CB4826 /* TMDB.m in Sources */,
 				56E95AA52CB0AE4500CB4826 /* TMDBViewController.m in Sources */,

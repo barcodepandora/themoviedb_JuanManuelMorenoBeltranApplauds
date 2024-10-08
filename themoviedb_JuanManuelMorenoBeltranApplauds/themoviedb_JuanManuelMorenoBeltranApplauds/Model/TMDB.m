@@ -7,7 +7,7 @@
 
 #import <Foundation/Foundation.h>
 #import "TMDB.h"
-#import "Movie.h"
+#import "TVShow.h"
 
 //@interface TMDB : NSObject
 //
@@ -41,7 +41,7 @@
 
 @end
 
-//@interface Movie : NSObject
+//@interface TVShow : NSObject
 //
 //@property (nonatomic, assign) BOOL adult;
 //@property (nonatomic, copy) NSString *backdrop_path;
@@ -60,7 +60,7 @@
 //
 //@end
 
-@implementation Movie
+@implementation TVShow
 
 - (instancetype)initWithAdult:(BOOL)adult backdrop_path:(NSString *)backdrop_path id:(NSInteger)id original_language:(NSString *)original_language overview:(NSString *)overview popularity:(double)popularity poster_path:(NSString *)poster_path release_date:(NSString *)release_date name:(NSString *)name video:(BOOL)video vote_average:(double)vote_average vote_count:(NSInteger)vote_count {
     self = [super init];

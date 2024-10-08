@@ -21,15 +21,15 @@
     return self;
 }
 
-- (void)fetchMoviesWithCompletion:(void (^)(NSArray<Movie *> * _Nullable movies, NSError * _Nullable error))completion {
-    [self.useCase fetchDataWithCompletion:^(NSArray<Movie *> * _Nullable movies, NSError * _Nullable error) {
+- (void)fetchTVShowsWithCompletion:(void (^)(NSArray<TVShow *> * _Nullable tvshows, NSError * _Nullable error))completion {
+    [self.useCase fetchDataWithCompletion:^(NSArray<TVShow *> * _Nullable tvshows, NSError * _Nullable error) {
         if (error) {
             completion(nil, error);
             return;
         }
         
-        self.movies = movies;
-        completion(self.movies, nil);
+        self.tvshows = tvshows;
+        completion(self.tvshows, nil);
     }];
 }
 

@@ -12,11 +12,11 @@
 #endif /* TMDBUseCaseProtocol_h */
 
 #import <Foundation/Foundation.h>
-#import "Movie.h"
+#import "TVShow.h"
 
 // TMDBUseCaseProtocol definition
 @protocol TMDBUseCaseProtocol <NSObject>
 
-- (void)fetchDataWithCompletion:(void (^)(NSArray<Movie *> * _Nullable movies, NSError * _Nullable error))completion;
+- (void)fetchDataWithCompletion:(void (^)(NSArray<TVShow *> * _Nullable tvshows, NSError * _Nullable error))completion;
 
 @end

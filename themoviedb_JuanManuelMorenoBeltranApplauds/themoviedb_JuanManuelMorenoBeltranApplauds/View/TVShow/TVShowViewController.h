@@ -1,5 +1,5 @@
 //
-//  MovieViewController.h
+//  TVShowViewController.h
 //  themoviedb_JuanManuelMorenoBeltranApplauds
 //
 //  Created by Juan Manuel Moreno on 5/10/24.
@@ -9,18 +9,18 @@
 
 //NS_ASSUME_NONNULL_BEGIN
 
-//@interface MovieViewController : ViewController
+//@interface TVShowViewController : ViewController
 //
 //@end
 
 #import <UIKit/UIKit.h>
-#import "Movie.h"
+#import "TVShow.h"
 
-@interface MovieViewController : UIViewController
+@interface TVShowViewController : UIViewController
 
 @property (nonatomic, strong) NSArray *elements;
 
-- (instancetype)initWithMovie:(Movie *)movie;
+- (instancetype)initWithTVShow:(TVShow *)movie;
 
 @end
 
