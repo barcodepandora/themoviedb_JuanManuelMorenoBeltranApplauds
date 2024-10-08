@@ -21,6 +21,6 @@
 
 - (instancetype)initWithUseCase:(TMDBUseCase *)useCase;
 
-- (void)fetchTVShowsWithCompletion:(void (^)(NSArray<TVShow *> * _Nullable tvshows, NSError * _Nullable error))completion;
+- (void)fetchTVShowsWithCompletion:(NSInteger) indexFor completion:(void (^)(NSArray<TVShow *> * _Nullable tvshows, NSError * _Nullable error))completion;
 
 @end

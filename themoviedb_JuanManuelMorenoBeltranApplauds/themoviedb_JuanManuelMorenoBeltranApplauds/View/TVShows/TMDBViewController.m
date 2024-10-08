@@ -17,6 +17,8 @@
 
 @implementation TMDBViewController
 
+NSInteger theIndexFor = 1;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.collectionView registerClass:[TMDBCollectionViewCell class] forCellWithReuseIdentifier:@"TVShowCell"];
@@ -27,15 +29,15 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self presentMenu];
-    [self fetchTVShows];
+    [self fetchTVShows:1];
 }
 
 - (void)callFunction1 {
-    [self fetchTVShows];
+    [self fetchTVShows:1];
 }
 
 - (void)callFunction2 {
-    [self fetchTVShows];
+    [self fetchTVShows:2];
 }
 
 -(void)presentMenu {
@@ -92,10 +94,12 @@
     return button;
 }
 
-- (void)fetchTVShows {
-    if (self.tvshows.count == 0) {
+- (void)fetchTVShows:(NSInteger) indexFor {
+    NSLog(@"%d %d", indexFor, theIndexFor);
+    if (self.tvshows.count == 0 || indexFor != theIndexFor) {
+        theIndexFor = indexFor;
         TMDBViewModel *vm = [[TMDBViewModel alloc] initWithUseCase:(TMDBUseCase *)[[TMDBUseCase alloc] init]];
-        [vm fetchTVShowsWithCompletion:^(NSArray<TVShow *> * _Nullable tvshows, NSError * _Nullable error) {
+        [vm fetchTVShowsWithCompletion:indexFor completion:^(NSArray<TVShow *> * _Nullable tvshows, NSError * _Nullable error) {
             if (error) {
                 NSLog(@"Error fetching data: %@", error.localizedDescription);
             } else {

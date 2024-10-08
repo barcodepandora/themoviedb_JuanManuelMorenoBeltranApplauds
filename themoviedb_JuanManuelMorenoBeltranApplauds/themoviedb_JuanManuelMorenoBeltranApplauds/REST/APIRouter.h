@@ -12,7 +12,8 @@
 #endif /* APIRouter_h */
 
 typedef NS_ENUM(NSUInteger, APIRouter) {
-    APIRouterGetData
+    APIRouterGetData,
+    APIRouterGetDataTopRated
 };
 
 @interface APIRouterHelper : NSObject
@@ -26,6 +27,7 @@ typedef NS_ENUM(NSUInteger, APIRouter) {
 + (instancetype)shared;
 
 @property (nonatomic, readonly) NSString *URLStringTMDB;
+@property (nonatomic, readonly) NSString *URLStringTMDBTopRated;
 @property (nonatomic, readonly) NSString *URLStringPoster;
 
 @end

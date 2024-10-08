@@ -39,8 +39,14 @@ NSError * ApplaudoErrorWithCode(ApplaudoErrorCode code) {
 
 @implementation TMDBUseCase
 
-- (void)fetchDataWithCompletion:(void (^)(NSArray<TVShow *> * _Nullable tvshows, NSError * _Nullable error))completion {
-    NSURLRequest *request = [APIRouterHelper requestForRoute:APIRouterGetData];
+- (void)fetchDataWithCompletion:(NSInteger) indexFor completion:(void (^)(NSArray<TVShow *> * _Nullable tvshows, NSError * _Nullable error))completion {
+    NSURLRequest *request;
+    switch (indexFor) {
+    case 1:
+        request = [APIRouterHelper requestForRoute:APIRouterGetData];
+    case 2:
+        request = [APIRouterHelper requestForRoute:APIRouterGetDataTopRated];
+    }
     
     NSURLSessionDataTask *task = [[NSURLSession sharedSession] dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         if (error) {

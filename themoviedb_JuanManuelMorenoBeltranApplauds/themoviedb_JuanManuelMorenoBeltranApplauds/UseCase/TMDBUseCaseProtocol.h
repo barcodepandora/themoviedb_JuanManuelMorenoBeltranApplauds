@@ -17,6 +17,6 @@
 // TMDBUseCaseProtocol definition
 @protocol TMDBUseCaseProtocol <NSObject>
 
-- (void)fetchDataWithCompletion:(void (^)(NSArray<TVShow *> * _Nullable tvshows, NSError * _Nullable error))completion;
+- (void)fetchDataWithCompletion:(NSInteger) indexFor completion:(void (^)(NSArray<TVShow *> * _Nullable tvshows, NSError * _Nullable error))completion;
 
 @end

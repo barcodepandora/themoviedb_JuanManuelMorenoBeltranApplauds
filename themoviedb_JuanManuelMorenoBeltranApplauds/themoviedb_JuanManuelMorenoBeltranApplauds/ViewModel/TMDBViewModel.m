@@ -21,8 +21,8 @@
     return self;
 }
 
-- (void)fetchTVShowsWithCompletion:(void (^)(NSArray<TVShow *> * _Nullable tvshows, NSError * _Nullable error))completion {
-    [self.useCase fetchDataWithCompletion:^(NSArray<TVShow *> * _Nullable tvshows, NSError * _Nullable error) {
+- (void)fetchTVShowsWithCompletion:(NSInteger) indexFor completion:(void (^)(NSArray<TVShow *> * _Nullable tvshows, NSError * _Nullable error))completion {
+    [self.useCase fetchDataWithCompletion:indexFor completion:^(NSArray<TVShow *> * _Nullable tvshows, NSError * _Nullable error) {
         if (error) {
             completion(nil, error);
             return;

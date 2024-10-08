@@ -33,6 +33,7 @@
     if (self) {
 //        _URLStringTMDB = @"https://api.themoviedb.org/3/movie/popular?api_key=41bb2316eccb422b9542a10273931559";
         _URLStringTMDB = @"https://api.themoviedb.org/3/tv/popular?api_key=41bb2316eccb422b9542a10273931559";
+        _URLStringTMDBTopRated = @"https://api.themoviedb.org/3/tv/top_rated?api_key=41bb2316eccb422b9542a10273931559";
         _URLStringPoster = @"https://image.tmdb.org/t/p/original";
     }
     return self;
@@ -46,6 +47,12 @@
     switch (route) {
         case APIRouterGetData: {
             NSString *urlString = [APIConstant.shared URLStringTMDB];
+            NSURL *url = [NSURL URLWithString:urlString];
+            NSURLRequest *request = [NSURLRequest requestWithURL:url];
+            return request;
+        }
+        case APIRouterGetDataTopRated: {
+            NSString *urlString = [APIConstant.shared URLStringTMDBTopRated];
             NSURL *url = [NSURL URLWithString:urlString];
             NSURLRequest *request = [NSURLRequest requestWithURL:url];
             return request;
