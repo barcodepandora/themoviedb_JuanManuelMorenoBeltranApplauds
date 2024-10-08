@@ -12,7 +12,6 @@
 #import "Movie.h"
 #import "APIRouter.h"
 
-// Define the errors as constants
 static NSString * const ApplaudoErrorDomain = @"com.Applaudo.error";
 
 typedef NS_ENUM(NSInteger, ApplaudoErrorCode) {
@@ -21,7 +20,6 @@ typedef NS_ENUM(NSInteger, ApplaudoErrorCode) {
     ApplaudoErrorWhenViewModel
 };
 
-// Define a method to generate NSError for Applaudo errors
 NSError * ApplaudoErrorWithCode(ApplaudoErrorCode code) {
     NSString *errorMessage;
     switch (code) {
@@ -74,68 +72,5 @@ NSError * ApplaudoErrorWithCode(ApplaudoErrorCode code) {
     
     [task resume];
 }
-
-//// Get data with filtering logic
-//- (NSArray<Movie *> *)getDataWithFilter:(Handler *)filterForMovies order:(MovieOrder)order filter:(NSString *)filter {
-//    NSMutableArray<Movie *> *filteredMovies = [NSMutableArray arrayWithArray:(filter.length == 0 ? self.movies : [self.movies filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"title CONTAINS %@", filter]])];
-//    
-//    // Filter based on adult content
-//    switch (filterForMovies.adult) {
-//        case HandlerAdultAllMinusAdult:
-//            [filteredMovies filterUsingPredicate:[NSPredicate predicateWithFormat:@"adult == NO"]];
-//            break;
-//        case HandlerAdultAdult:
-//            [filteredMovies filterUsingPredicate:[NSPredicate predicateWithFormat:@"adult == YES"]];
-//            break;
-//        case HandlerAdultAll:
-//            break;
-//    }
-//    
-//    // Filter based on language
-//    switch (filterForMovies.language) {
-//        case HandlerLanguageEnglish:
-//            [filteredMovies filterUsingPredicate:[NSPredicate predicateWithFormat:@"original_language == %@", @"en"]];
-//            break;
-//        case HandlerLanguageFrancaise:
-//            [filteredMovies filterUsingPredicate:[NSPredicate predicateWithFormat:@"original_language == %@", @"fr"]];
-//            break;
-//        case HandlerLanguageAll:
-//            break;
-//    }
-//    
-//    // Filter based on vote average
-//    switch (filterForMovies.average) {
-//        case HandlerAverageLessThan5K:
-//            [filteredMovies filterUsingPredicate:[NSPredicate predicateWithFormat:@"vote_average <= 7"]];
-//            break;
-//        case HandlerAverageMoreThan5K:
-//            [filteredMovies filterUsingPredicate:[NSPredicate predicateWithFormat:@"vote_average > 7"]];
-//            break;
-//        case HandlerAverageAll:
-//            break;
-//    }
-//    
-//    return [self orderDataWithMovies:filteredMovies order:order filter:filter];
-//}
-//
-//// Order data method
-//- (NSArray<Movie *> *)orderDataWithMovies:(NSArray<Movie *> *)moviesForOrder order:(MovieOrder)order filter:(NSString *)filter {
-//    NSArray<Movie *> *orderedMovies;
-//    
-//    switch (order) {
-//        case MovieOrderPopularity:
-//            orderedMovies = [moviesForOrder sortedArrayUsingComparator:^NSComparisonResult(Movie *movie1, Movie *movie2) {
-//                return [movie2.popularity compare:movie1.popularity];
-//            }];
-//            break;
-//        case MovieOrderTopRated:
-//            orderedMovies = [moviesForOrder sortedArrayUsingComparator:^NSComparisonResult(Movie *movie1, Movie *movie2) {
-//                return [movie2.vote_count compare:movie1.vote_count];
-//            }];
-//            break;
-//    }
-//    
-//    return orderedMovies;
-//}
 
 @end

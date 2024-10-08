@@ -181,8 +181,8 @@
 			isa = PBXGroup;
 			children = (
 				5638FE872CB17F80000CB789 /* TMDB.h */,
-				56E95AA92CB0B38B00CB4826 /* TMDB.m */,
 				5638FE882CB17FE7000CB789 /* Movie.h */,
+				56E95AA92CB0B38B00CB4826 /* TMDB.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";

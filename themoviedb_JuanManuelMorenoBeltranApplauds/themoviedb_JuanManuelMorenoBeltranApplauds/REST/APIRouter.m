@@ -31,7 +31,8 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
-        _URLStringTMDB = @"https://api.themoviedb.org/3/movie/popular?api_key=41bb2316eccb422b9542a10273931559";
+//        _URLStringTMDB = @"https://api.themoviedb.org/3/movie/popular?api_key=41bb2316eccb422b9542a10273931559";
+        _URLStringTMDB = @"https://api.themoviedb.org/3/tv/popular?api_key=41bb2316eccb422b9542a10273931559";
         _URLStringPoster = @"https://image.tmdb.org/t/p/original";
     }
     return self;

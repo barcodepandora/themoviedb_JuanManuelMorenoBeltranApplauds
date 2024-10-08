@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="TMDB Logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="0Z7-Pq-BBC">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Portrait" translatesAutoresizingMaskIntoConstraints="NO" id="0Z7-Pq-BBC">
                                 <rect key="frame" x="-9" y="0.0" width="412" height="852"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -62,7 +62,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="TMDB Logo.png" width="376" height="808"/>
+        <image name="Portrait" width="125.33333587646484" height="269.33334350585938"/>
         <systemColor name="systemGreenColor">
             <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

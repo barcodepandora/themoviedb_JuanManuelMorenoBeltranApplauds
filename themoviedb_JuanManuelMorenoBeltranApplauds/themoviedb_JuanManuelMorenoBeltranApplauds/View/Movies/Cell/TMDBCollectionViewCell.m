@@ -28,14 +28,14 @@
 //    [self loadImageWithURL:[movie valueForKey:@"poster_path"]];
 //    [mainStackView addArrangedSubview:starImageView];
 
-    // Movie Title Label
-    self.movieTitleLabel = [[UILabel alloc] init];
-//    NSLog(@"Movie Title: %@", [movie valueForKey:@"title"]);
-    self.movieTitleLabel.text = [movie valueForKey:@"title"]; //@"Insatiable";
-    self.movieTitleLabel.font = [UIFont boldSystemFontOfSize:13.0];
-    self.movieTitleLabel.textColor = [UIColor greenColor];
-    self.movieTitleLabel.textAlignment = NSTextAlignmentLeft;
-    [self.contentView addSubview:self.movieTitleLabel];
+    // Movie name Label
+    self.movienameLabel = [[UILabel alloc] init];
+//    NSLog(@"Movie name: %@", [movie valueForKey:@"name"]);
+    self.movienameLabel.text = [movie valueForKey:@"name"]; //@"Insatiable";
+    self.movienameLabel.font = [UIFont boldSystemFontOfSize:13.0];
+    self.movienameLabel.textColor = [UIColor greenColor];
+    self.movienameLabel.textAlignment = NSTextAlignmentLeft;
+    [self.contentView addSubview:self.movienameLabel];
     
     // Release Date Label
     self.releaseDateLabel = [[UILabel alloc] init];
@@ -73,38 +73,38 @@
 
 - (void)setupConstraints {
     // Set translatesAutoresizingMaskIntoConstraints to NO for all subviews
-    for (UIView *view in @[self.movieTitleLabel, self.hStackView, self.descriptionLabel]) {
-//        for (UIView *view in @[self.titleLabel, self.subtitleLabel, self.rectangleView, self.movieTitleLabel, self.hStackView, self.descriptionLabel]) {
+    for (UIView *view in @[self.movienameLabel, self.hStackView, self.descriptionLabel]) {
+//        for (UIView *view in @[self.nameLabel, self.subnameLabel, self.rectangleView, self.movienameLabel, self.hStackView, self.descriptionLabel]) {
 
         view.translatesAutoresizingMaskIntoConstraints = NO;
     }
 
     // Add AutoLayout constraints
     [NSLayoutConstraint activateConstraints:@[
-        // Title label constraints
-//        [self.titleLabel.topAnchor constraintEqualToAnchor:self.contentView.topAnchor constant:10],
-//        [self.titleLabel.leadingAnchor constraintEqualToAnchor:self.contentView.leadingAnchor constant:20],
-//        [self.titleLabel.trailingAnchor constraintEqualToAnchor:self.contentView.trailingAnchor constant:-20],
+        // name label constraints
+//        [self.nameLabel.topAnchor constraintEqualToAnchor:self.contentView.topAnchor constant:10],
+//        [self.nameLabel.leadingAnchor constraintEqualToAnchor:self.contentView.leadingAnchor constant:20],
+//        [self.nameLabel.trailingAnchor constraintEqualToAnchor:self.contentView.trailingAnchor constant:-20],
 //        
-//        // Subtitle label constraints
-//        [self.subtitleLabel.topAnchor constraintEqualToAnchor:self.titleLabel.bottomAnchor constant:10],
-//        [self.subtitleLabel.leadingAnchor constraintEqualToAnchor:self.contentView.leadingAnchor constant:20],
-//        [self.subtitleLabel.trailingAnchor constraintEqualToAnchor:self.contentView.trailingAnchor constant:-20],
+//        // Subname label constraints
+//        [self.subnameLabel.topAnchor constraintEqualToAnchor:self.nameLabel.bottomAnchor constant:10],
+//        [self.subnameLabel.leadingAnchor constraintEqualToAnchor:self.contentView.leadingAnchor constant:20],
+//        [self.subnameLabel.trailingAnchor constraintEqualToAnchor:self.contentView.trailingAnchor constant:-20],
         
         // Rectangle view constraints
 //        [self.rectangleView.leadingAnchor constraintEqualToAnchor:self.contentView.leadingAnchor constant:20],
 //        [self.rectangleView.widthAnchor constraintEqualToConstant:182],
 //        [self.rectangleView.heightAnchor constraintEqualToConstant:100],
 
-        // Ajusta el tamaño de la imagen (equivalente a .font(.largeTitle) en SwiftUI)
+        // Ajusta el tamaño de la imagen (equivalente a .font(.largename) en SwiftUI)
 //        [starImageView.heightAnchor constraintEqualToConstant:30].active = YES;
 
-        // Movie title label constraints
-//        [self.movieTitleLabel.topAnchor constraintEqualToAnchor:self.rectangleView.bottomAnchor constant:10],
-//        [self.movieTitleLabel.centerXAnchor constraintEqualToAnchor:self.rectangleView.centerXAnchor],
+        // Movie name label constraints
+//        [self.movienameLabel.topAnchor constraintEqualToAnchor:self.rectangleView.bottomAnchor constant:10],
+//        [self.movienameLabel.centerXAnchor constraintEqualToAnchor:self.rectangleView.centerXAnchor],
         
         // HStackView constraints
-        [self.hStackView.topAnchor constraintEqualToAnchor:self.movieTitleLabel.bottomAnchor constant:10],
+        [self.hStackView.topAnchor constraintEqualToAnchor:self.movienameLabel.bottomAnchor constant:10],
 //        [self.hStackView.centerXAnchor constraintEqualToAnchor:self.rectangleView.centerXAnchor],
         
         // Description label constraints

@@ -39,7 +39,7 @@
 //                                      popularity:8.0
 //                                     poster_path:@"poster1"
 //                                   release_date:@"2024-01-01"
-//                                           title:@"Movie 1"
+//                                           name:@"Movie 1"
 //                                           video:NO
 //                                    vote_average:7.5
 //                                      vote_count:1000];
@@ -52,7 +52,7 @@
 //                                      popularity:9.5
 //                                     poster_path:@"poster2"
 //                                   release_date:@"2024-02-01"
-//                                           title:@"Movie 2"
+//                                           name:@"Movie 2"
 //                                           video:NO
 //                                    vote_average:8.5
 //                                      vote_count:2000];
